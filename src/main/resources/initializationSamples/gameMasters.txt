@@ -1,0 +1,14 @@
+Gawd	*
+Nate	Monopoly;Ticket to Ride;Monopoly
+Krell	Splendor
+McPain	Monopoly
+DryBark	*
+Beem	Ticket to Ride;Splendor
+FullFaith	Monopoly
+Iso	Ticket to Ride;Rabbit RPG
+Hornet	Rabbit RPG
+Xenomorph	Rabbit RPG
+Lee	Splendor;Monopoly
+Shin	Monopoly;Rabbit RPG;Ticket to Ride
+Hardcore	Splendor
+Phobia	Rabbit RPG;Monopoly

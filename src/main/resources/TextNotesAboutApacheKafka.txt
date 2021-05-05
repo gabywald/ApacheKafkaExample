@@ -1,0 +1,55 @@
+https://fr.wikipedia.org/wiki/Apache_Kafka -- 
+https://en.wikipedia.org/wiki/Apache_Kafka -- 
+https://kafka.apache.org/documentation/ -- 
+
+Dépendance maven : 
+	<dependency>
+		<groupId>org.apache.kafka</groupId>
+		<artifactId>kafka-clients</artifactId>
+		<version>1.1.0</version>
+	</dependency>
+
+There are four major APIs in Kafka:
+
+    Producer API– Permits the applications to publish streams of records.
+    Consumer API– Permits the application to subscribe to the topics and processes the stream of records.
+    Connector API– Executes the reusable producer and consumer APIs that can link the topics to the existing applications.
+    Streams API– This API converts the input streams to output and produces the result.
+
+https://kafka.apache.org/ -- 
+<<Kafka® is used for building real-time data pipelines and streaming apps. It is horizontally scalable, fault-tolerant, wicked fast, and runs in production in thousands of companies.>>
+
+https://kafka.apache.org/documentation/#connect -- 
+https://kafka.apache.org/documentation/streams/ -- 
+https://cwiki.apache.org/confluence/display/KAFKA/Ecosystem -- 
+
+https://www.tutorialspoint.com/apache_kafka/index.htm -- 
+
+https://www.youtube.com/watch?v=BBo-rqmhpDM -- 
+https://www.youtube.com/watch?v=BGhlHsFBhLE -- 
+
+https://www.tutorialkart.com/apache-kafka-tutorial/ -- 
+https://www.tutorialspoint.com/apache_kafka/apache_kafka_introduction.htm -- 
+
+=> sur google "filetype:pdf apache kafka tutoriel"
+
+https://cwiki.apache.org/confluence/display/KAFKA/Ecosystem -- 
+
+
+https://blog.zenika.com/2017/09/14/mais-cest-quoi-apache-kafka/ -- 
+http://blog.xebia.fr/2016/03/04/apache-kafka-une-plateforme-centralisee-des-echanges-de-donnees/ -- 
+https://blog.zenika.com/2017/09/14/mais-cest-quoi-apache-kafka/ -- 
+
+https://stackoverflow.com/questions/17730905/is-there-a-way-to-delete-all-the-data-from-a-topic-or-delete-the-topic-before-ev#18412688 -- 
+https://stackoverflow.com/questions/16284399/purge-kafka-topic -- 
+
+https://fr.slideshare.net/jhols1/kafka-atlmeetuppublicv2 -- 
+
+https://blog.octo.com/kafka-streams-encore-un-framework-de-stream-processing/ -- 
+https://openclassrooms.com/courses/4451251-gerez-des-flux-de-donnees-temps-reel/4451526-creez-votre-premiere-application-avec-kafka -- 
+
+https://dzone.com/articles/20-best-practices-for-working-with-apache-kafka-at -- 
+
+
+nohup ./bin/zookeeper-server-start.sh config/zookeeper.properties &
+nohup ./bin/kafka-server-start.sh config/server.properties &

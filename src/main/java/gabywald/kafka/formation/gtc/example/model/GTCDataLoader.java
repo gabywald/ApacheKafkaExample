@@ -10,7 +10,8 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Random;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Load data from internal / sample files ; 
@@ -19,7 +20,7 @@ import org.apache.log4j.Logger;
  */
 public class GTCDataLoader {
 
-  private static final Logger log = Logger.getLogger(GTCDataLoader.class);
+  private static final Logger log = LoggerFactory.getLogger(GTCDataLoader.class);
   public static final String PATH_BASE = "src/main/resources/";
   public static final String PATH_DIRECTORY = PATH_BASE + "initializationSamples/";
   public static final String[] DATA_FILES = { "agentaliases.txt", "gameMasters.txt", "games2create.txt", };

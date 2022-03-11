@@ -7,7 +7,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -22,7 +23,7 @@ import gabywald.kafka.formation.gtc.example.model.GTCTable;
 
 public class JacksonJSONUse {
 	
-	private static final Logger log = Logger.getLogger( JacksonJSONUse.class );
+	private static final Logger log = LoggerFactory.getLogger( JacksonJSONUse.class );
 
 	public static void main(String[] args) {
 		

@@ -7,7 +7,8 @@ import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import gabywald.kafka.formation.gtc.example.GTCPropertiesLoader.GTCConfigProperties;
 import gabywald.kafka.formation.gtc.example.model.GTCDataLoader;
@@ -18,7 +19,7 @@ import gabywald.kafka.formation.gtc.example.model.GTCDataLoader;
  */
 public class GTCProducer extends GTCParent implements Runnable {
 
-  private static final Logger log = Logger.getLogger(GTCProducer.class);
+  private static final Logger log = LoggerFactory.getLogger(GTCProducer.class);
   private LinkedList<String> data2sent = new LinkedList<String>();
   private Properties configProperties = new Properties();
 

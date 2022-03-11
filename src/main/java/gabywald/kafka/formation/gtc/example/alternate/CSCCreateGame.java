@@ -1,6 +1,7 @@
 package gabywald.kafka.formation.gtc.example.alternate;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
@@ -13,7 +14,7 @@ import gabywald.kafka.formation.gtc.example.model.GTCModelWrapper;
  */
 public class CSCCreateGame implements ConsumerSwitchCommand {
 	
-	private static final Logger log = Logger.getLogger( CSCCreateGame.class );
+	private static final Logger log = LoggerFactory.getLogger( CSCCreateGame.class );
 
 	@Override
 	public String execute(JsonNode jsonnode) {

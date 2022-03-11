@@ -23,7 +23,8 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -45,7 +46,7 @@ import gabywald.kafka.formation.gtc.example.model.GTCTable;
 @SuppressWarnings("serial")
 public class GTCMainFrame extends JFrame {
 
-  private static final Logger log = Logger.getLogger(GTCMainFrame.class);
+  private static final Logger log = LoggerFactory.getLogger(GTCMainFrame.class);
   private static GTCMainFrame gtcConsumerInstance = null;
   private static GTCMainFrame gtcProducerInstance = null;
   public static final Font consumerFont = new Font(Font.MONOSPACED, Font.BOLD, 20);

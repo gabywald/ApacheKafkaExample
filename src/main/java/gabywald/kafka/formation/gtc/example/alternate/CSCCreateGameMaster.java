@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
@@ -18,7 +19,7 @@ import gabywald.kafka.formation.gtc.example.model.GTCModelWrapper;
  */
 public class CSCCreateGameMaster implements ConsumerSwitchCommand {
 	
-	private static final Logger log = Logger.getLogger( CSCCreateGameMaster.class );
+	private static final Logger log = LoggerFactory.getLogger( CSCCreateGameMaster.class );
 
 	@Override
 	public String execute(JsonNode jsonnode) {

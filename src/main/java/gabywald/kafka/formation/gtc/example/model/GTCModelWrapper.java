@@ -8,7 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -22,7 +23,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  */
 public class GTCModelWrapper {
 	
-	private static final Logger log = Logger.getLogger( GTCModelWrapper.class );
+	private static final Logger log = LoggerFactory.getLogger( GTCModelWrapper.class );
 	
 	/** Jackson / JSON purposes. */
 	private static final ObjectMapper objectMapper = new ObjectMapper();

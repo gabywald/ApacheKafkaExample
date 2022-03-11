@@ -12,7 +12,8 @@ import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.errors.WakeupException;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -32,7 +33,7 @@ import gabywald.kafka.formation.gtc.example.model.GTCTable;
  * */
 public class GTCConsumer extends GTCParent implements Runnable {
 
-  private static final Logger log = Logger.getLogger(GTCConsumer.class);
+  private static final Logger log = LoggerFactory.getLogger(GTCConsumer.class);
   private Properties configProperties = new Properties();
   private KafkaConsumer<String, String> kafkaConsumer;
 

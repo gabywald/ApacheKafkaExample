@@ -11,7 +11,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-		<apache-kafka.version>1.1.0</apache-kafka.version>
+		<apache-kafka.version>3.9.2</apache-kafka.version>
 		
 		<slf4j.version>1.7.26</slf4j.version>
 		

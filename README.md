@@ -25,10 +25,17 @@ TODO Unit Tests
 
 TODO Integration Tests
 
+NOTE 20260430 : 
+	- update for security reasons ! 
+	- this example project to be retaken / redo ; 
+	- TODO tests and other things ! (compilation is good)
+
 ## What the acronym "GTC" stand for ?
 
 Keeped from an idea in French, "Gestionnaire de Tables de Convention" aka "Convention Table Manager" : an basic concept idea for a management software for TableTop RPG (TTRPG, "JdR" or "Jeu de Rôle" in french, sometimes labelled "Jeu de Rôle sur table"), to simply manage Table, Games, Game Masters and Players in a Gaming Convention where TTPRG is played. 
 
 Base Concept and Other Technologies here : https://github.com/TroisBieres/GTC 
+
+See also (in french) for TTPRG conventions in France ! => https://www.conventions-rolistes.org/
 
 ... 

@@ -125,7 +125,7 @@ public class KafkaStream {
 		public void setConfig(final String storeName, final Options options, final Map<String, Object> configs) {
 			// See #1 below.
 			BlockBasedTableConfig tableConfig = new org.rocksdb.BlockBasedTableConfig();
-			tableConfig.setBlockCacheSize(16 * 1024 * 1024L);
+			// ***** tableConfig.setBlockCacheSize(16 * 1024 * 1024L);
 			// See #2 below.
 			tableConfig.setBlockSize(16 * 1024L);
 			// See #3 below.
@@ -133,6 +133,12 @@ public class KafkaStream {
 			options.setTableFormatConfig(tableConfig);
 			// See #4 below.
 			options.setMaxWriteBufferNumber(2);
+		}
+
+		@Override
+		public void close(String storeName, Options options) {
+			// TODO Auto-generated method stub
+			
 		}
 
 	}

@@ -6,9 +6,10 @@ import java.util.Properties;
 
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.KafkaStreams;
+import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.StreamsConfig;
+import org.apache.kafka.streams.Topology;
 import org.apache.kafka.streams.kstream.KStream;
-import org.apache.kafka.streams.kstream.KStreamBuilder;
 import org.apache.kafka.streams.kstream.KTable;
 import org.apache.kafka.streams.state.RocksDBConfigSetter;
 import org.rocksdb.BlockBasedTableConfig;
@@ -31,15 +32,17 @@ public class WordCountApplication {
 
 		config.put(StreamsConfig.ROCKSDB_CONFIG_SETTER_CLASS_CONFIG, CustomRocksDBConfig.class);
 
-		KStreamBuilder builder = new KStreamBuilder();
+		StreamsBuilder builder = new StreamsBuilder();
 		KStream<String, String> textLines = builder.stream("TextLinesTopic");
 		KTable<String, Long> wordCounts = textLines
 				.flatMapValues(textLine -> Arrays.asList(textLine.toLowerCase().split("\\W+")))
 				.groupBy((key, word) -> word)
-				.count("Counts");
-		wordCounts.to(Serdes.String(), Serdes.Long(), "WordsWithCountsTopic");
+				.count(); // ***** .count("Counts");
+		// ***** wordCounts.to(Serdes.String(), Serdes.Long(), "WordsWithCountsTopic");
+		wordCounts.toStream();
 
-		KafkaStreams streams = new KafkaStreams(builder, config);
+		Topology topology = builder.build();
+		KafkaStreams streams = new KafkaStreams(topology, config);
 		streams.start();
 
 		Runtime.getRuntime().addShutdownHook(new Thread(streams::close));
@@ -59,6 +62,12 @@ public class WordCountApplication {
 			options.setTableFormatConfig(tableConfig);
 			// See #4 below.
 			options.setMaxWriteBufferNumber(2);
+		}
+
+		@Override
+		public void close(String storeName, Options options) {
+			// TODO Auto-generated method stub
+			
 		}
 
 	}
